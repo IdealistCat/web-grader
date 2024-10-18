@@ -10,12 +10,14 @@
     <hr>
     <input id="input1" placeholder="5"></input> divided by <input id="input2" placeholder="10"></input>
     <hr>
-    <button onclick="caluclate()">Calculate</button>
+    <button id="calculateButton">Calculate</button>
     <hr>
     <h1>Result</h1>
     <p id="result">0</p>
     <hr>
     <script>
+        document.getElementById('calculateButton').onclick = calculate();
+        
         function calculate() {
             const input1 = document.getElementById('input1');
             const input2 = document.getElementById('input2');
