@@ -17,16 +17,17 @@
     <hr>
     <script>
         document.getElementById('calculateButton').onclick = calculate();
-        
+
         function calculate() {
-            const input1 = document.getElementById('input1');
-            const input2 = document.getElementById('input2');
+            const input1 = document.getElementById('input1').innerHTML;
+            const input2 = document.getElementById('input2').innerHTML;
             
             const INT_INPUTS = typeof(input1) == 'number' || typeof(input2) == 'number';
 
             if (INT_INPUTS) {
                 let output = input1/input2 * 100;
-                document.getElementById('result').innerHTML == output.toString();
+
+                document.getElementById('result').innerHTML == String(output);
             } else {
                 document.getElementById('result').innerHTML == 'TypeError: expected integer or Float';
             }
