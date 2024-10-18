@@ -8,8 +8,27 @@
 <body>
     <h1>Web Grader</h1>
     <hr>
-    <input placeholder="5"></input> divided by <input placeholder="10"></input>
+    <input id="input1" placeholder="5"></input> divided by <input id="input2" placeholder="10"></input>
     <hr>
     <button onclick="caluclate()">Calculate</button>
+    <hr>
+    <h1>Result</h1>
+    <p id="result">0</p>
+    <hr>
+    <script>
+        function calculate() {
+            const input1 = document.getElementById('input1');
+            const input2 = document.getElementById('input2');
+            
+            const INT_INPUTS = typeof(input1) == 'number' || typeof(input2) == 'number';
+
+            if (INT_INPUTS) {
+                let output = input1/input2 * 100;
+                document.getElementById('result').innerHTML == output.toString();
+            } else {
+                document.getElementById('result').innerHTML == 'TypeError: expected integer or Float';
+            }
+        }
+    </script>
 </body>
 </html>
